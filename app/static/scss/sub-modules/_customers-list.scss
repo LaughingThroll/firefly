@@ -1,0 +1,10 @@
+.customers-list {
+  display: flex;
+  align-items: center;
+  &__item {
+    flex: 0 1 25%;
+    & + .customers-list__item {
+      margin-left: 50px;
+    }
+  }
+}

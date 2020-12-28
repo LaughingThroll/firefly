@@ -6,7 +6,7 @@
 
 @import 'modules/header';
 @import 'modules/banner';
-
+@import 'modules/customers';
 @import 'modules/footer';
 
 @import './sub-modules/canvas';
@@ -17,6 +17,6 @@
 @import './sub-modules/burger-btn';
 @import './sub-modules/title';
 @import './sub-modules/button';
-
+@import './sub-modules/customers-list';
 
 @import 'utils/media';

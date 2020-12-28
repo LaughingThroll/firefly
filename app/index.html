@@ -37,7 +37,17 @@
 				</div>
 				<div class="header__bottom">
 					<div class="container header__bottom-container">
-						<a href="#" class="logo"><img src="images/content/logo.png" alt="Logotype FireFly"></a>
+						<a href="#" class="logo">
+							<picture class="images-wrapper customers-list__images">
+								<source
+									srcset="images/content/logo.webp 1x, images/content/logo@2x.webp 2x, images/content/logo@3x.webp 3x">
+								<source
+									srcset="images/content/logo.png 1x, images/content/logo@2x.png 2x, images/content/logo@3x.png 3x">
+								<img src="images/content/logo.png" alt="Логотип FireFly">
+							</picture>
+
+
+						</a>
 						<nav class="header__menu main-menu">
 							<ul class="main-menu__list">
 								<li class="main-menu__item main-menu__item--active"><a href="#" class="main-menu__link">Главная</a></li>
@@ -50,22 +60,71 @@
 						</nav>
 						<button class="burger-btn">
 							<svg class="svg-icon burger-btn__icon">
-								<use xlink:href="images/icons/sprite.svg#burger-nav"></use>	
-							</svg>		
+								<use xlink:href="images/icons/sprite.svg#burger-nav"></use>
+							</svg>
 						</button>
 					</div>
-			
+
 				</div>
 
 			</header>
 			<section class="banner">
 				<div class="container banner__container">
 					<h1 class="banner__title title">Мы создаем комфорт для вашего корпоративного бизнеса</h1>
-					<p class="banner__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, vitae.</p>
+					<p class="banner__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, vitae. Lorem ipsum
+						dolor sit amet, consectetur adipisicing elit. Velit, vitae.</p>
 					<button class="button">Исследовать сейчас</button>
 				</div>
-			</section>	
-			
+			</section>
+			<section class="customers">
+				<div class="container customers__container">
+					<div class="customers__headline">
+						<h3 class="customers__title title">Наши Клиенты</h3>
+						<p class="customers__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ex vitae accusamus
+							aperiam expedita quod quos animi omnis magni vero. </p>
+					</div>
+					<ul class="customers-list">
+						<li class="customers-list__item">
+							<picture class="images-wrapper customers-list__images">
+								<source
+									srcset="images/content/customers/vintage.webp 1x, images/content/customers/vintage@2x.webp 2x, images/content/customers/vintage@3x.webp 3x">
+								<source
+									srcset="images/content/customers/vintage.png 1x, images/content/customers/vintage@2x.png 2x, images/content/customers/vintage@3x.png 3x">
+								<img src="images/content/customers/vintage.png" alt=" компания Vintage наш клиент">
+							</picture>
+						</li>
+						<li class="customers-list__item">
+							<picture class="images-wrapper customers-list__images">
+								<source
+									srcset="images/content/customers/woody.webp 1x, images/content/customers/woody@2x.webp 2x, images/content/customers/woody@3x.webp 3x">
+								<source
+									srcset="images/content/customers/woody.png 1x, images/content/customers/woody@2x.png 2x, images/content/customers/woody@3x.png 3x">
+								<img src="images/content/customers/woody.png" alt=" компания Woody наш клиент">
+							</picture>
+
+						</li>
+						<li class="customers-list__item">
+							<picture class="images-wrapper customers-list__images">
+								<source
+									srcset="images/content/customers/limber.webp 1x, images/content/customers/limber@2x.webp 2x, images/content/customers/limber@3x.webp 3x">
+								<source
+									srcset="images/content/customers/limber.png 1x, images/content/customers/limber@2x.png 2x, images/content/customers/limber@3x.png 3x">
+								<img src="images/content/customers/limber.png" alt=" компания Limber наш клиент">
+							</picture>
+
+						</li>
+						<li class="customers-list__item">
+							<picture class="images-wrapper customers-list__images">
+								<source
+									srcset="images/content/customers/retro.webp 1x, images/content/customers/retro@2x.webp 2x, images/content/customers/retro@3x.webp 3x">
+								<source
+									srcset="images/content/customers/retro.png 1x, images/content/customers/retro@2x.png 2x, images/content/customers/retro@3x.png 3x">
+								<img src="images/content/customers/retro.png" alt=" компания Retro наш клиент">
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
 		</main>
 		<footer class="footer"></footer>
 	</div>
