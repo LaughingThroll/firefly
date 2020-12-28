@@ -1,0 +1,29 @@
+.main-menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+    & + .main-menu__item {
+      margin-left: 30px;
+    }
+    &--active {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 20px);
+        height: 2px;
+        background-color: $fruit-salad;
+      }
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: $river-bed;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'utils/vars';
+@import 'utils/sprite';
+@import 'utils/mixin';
+@import 'utils/fonts';
+@import 'utils/global';
+
+@import 'modules/header';
+@import 'modules/footer';
+
+
+
+
+@import './sub-modules/socials-list';
+@import './sub-modules/hotline';
+@import './sub-modules/logo';
+@import './sub-modules/main-menu';
+@import './sub-modules/burger-btn';
+@import './sub-modules/canvas';
+
+
+@import 'utils/media';

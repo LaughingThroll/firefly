@@ -1,0 +1,21 @@
+.socials-list {
+  display: flex;
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    & + .socials-list__item {
+      margin-left: 20px;
+    }
+    &:hover {
+      .socials-list__link {
+        color: $slate-gray;
+      }
+    }
+  } 
+  &__link {
+    color: $submarine;
+    transition: color $fast ease-in;
+  }
+}

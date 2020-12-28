@@ -1,0 +1,51 @@
+// ALL_COLOR 
+$main-color: #8191a6;
+
+$white: #fff;
+$black: #000;
+$submarine: #b5bcc3;
+$slate-gray: #6b7c93;
+$outer-space: #303842;
+$mercury: #e5e5e5;
+$river-bed: #45505e; 
+$fruit-salad: #4caf50;
+
+// FONT
+$main-font: 'Roboto';
+// + or - size * on number [.5, .75, 1.25, 1.5]
+$main-fz: 14px;
+
+
+// CONTAINER
+$main-width: 1920px;
+// H1-H6
+h1 {
+  font-size: 56px;
+  line-height: 72px;
+}
+h2 {
+  font-size: 34px;
+  line-height: 32px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+h4 {
+  font-size: 14px;
+  line-height: 16px;
+}
+// h5 {
+//   font-size: 14px;
+//   line-height: 18px;
+// }
+// h6 {
+//   font-size: 16px;
+//   line-height: 16px;
+// }
+
+// SPRITE
+$pathS: '../images/icons/sprite.png';
+
+// TRANSITION_TIMES
+$fast: .5s;
