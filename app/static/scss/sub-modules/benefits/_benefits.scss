@@ -1,0 +1,11 @@
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 0 1 calc(50% - 30px);
+    margin-bottom: 60px;
+    &:nth-child(even) {
+      margin-left: 20px;
+    }
+  }
+}

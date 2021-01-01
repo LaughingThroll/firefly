@@ -7,6 +7,8 @@
 @import 'modules/header';
 @import 'modules/banner';
 @import 'modules/customers';
+@import 'modules/services';
+
 @import 'modules/footer';
 
 @import './sub-modules/canvas';
@@ -18,5 +20,7 @@
 @import './sub-modules/title';
 @import './sub-modules/button';
 @import './sub-modules/customers-list';
+@import './sub-modules/benefits/benefits';
+@import './sub-modules/benefits/benefit';
 
 @import 'utils/media';

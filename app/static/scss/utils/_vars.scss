@@ -11,6 +11,8 @@ $river-bed: #45505e;
 $fruit-salad: #4caf50;
 $gallery: #f0f0f0;
 
+
+
 // FONT
 $main-font: 'Roboto';
 // + or - size * on number [.5, .75, 1.25, 1.5]
@@ -28,7 +30,7 @@ h2 {
   font-size: 34px;
   line-height: 32px;
 }
-h3 {
+h3, .h3-like {
   font-size: 24px;
   line-height: 28px;
 }

@@ -1,0 +1,24 @@
+.benefit {
+  position: relative;
+  padding-left: 100px;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    color: $main-color;
+    transition: color $fast easy-in;
+  }
+  &:hover::before {
+    color: $fruit-salad;
+  }
+  &__title {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;  
+  }
+  &__text {
+    font-family: $main-font;
+    font-weight: 300;
+  } 
+}
