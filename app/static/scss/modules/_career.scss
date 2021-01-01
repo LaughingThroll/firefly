@@ -1,0 +1,25 @@
+.career {
+  position: relative;
+  padding: 180px 0 140px 210px;
+  background-color: $alabaster;
+  background-image: url('./../images/content/man.png');
+  background-image: image-set(url('./../images/content/man.png') 1x, url('./../images/content/man@2x.png') 2x, url('./../images/content/man@3x.png') 3x) ;
+  background-repeat: no-repeat;
+  background-size: 450px 550px;
+  background-position: 95% center;
+  &__container {
+    & > *:not(:last-child) {
+      max-width: 675px;
+      width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 90px;
+  }
+  &__counters {
+
+  }
+}

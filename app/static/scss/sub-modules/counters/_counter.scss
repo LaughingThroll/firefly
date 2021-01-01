@@ -1,0 +1,37 @@
+.counter {
+  text-transform: uppercase;
+  &__number {
+    font-size: 44px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 15px;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.counter:nth-child(1) {
+  .counter__number {
+    color: $number-turquoise;
+  }
+}
+
+.counter:nth-child(2) {
+  .counter__number {
+    color: $number-malibu;
+  }
+}
+
+.counter:nth-child(3) {
+  .counter__number {
+    color: $number-brightsun;
+  }
+}
+
+.counter:nth-child(4) {
+  .counter__number {
+    color: $number-pomegranate;
+  }
+}

@@ -69,12 +69,7 @@ a {
 img {
 	display: block;
 }
-.images-wrapper {
-	img {
-		width: 100%;
-		height: 100%;
-	}
-}
+
 
 // end reset CSS
 
@@ -90,10 +85,22 @@ img {
 .footer {
 	flex: 0 0 auto;
 }
+
 .container {
 	max-width: $main-width;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.images-wrapper {
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.main-skew {
+	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 }
 section {
 	border-bottom: 1px solid $gallery;
