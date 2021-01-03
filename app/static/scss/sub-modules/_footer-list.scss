@@ -1,0 +1,17 @@
+.footer-list {
+  &__item {
+    font-weight: 400;
+    & + .footer-list__item {
+      margin-top: 20px;
+    }
+    &:hover {
+      .footer-list__link {
+        color: $outer-space;
+      }
+    }
+  }
+  &__link {
+    color: $main-color;
+    transition: color $fast ease-in;
+  } 
+}

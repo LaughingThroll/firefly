@@ -1,3 +1,41 @@
 .footer {
-    
+  padding: 80px 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;    
+  }   
+  &__col {
+    &:nth-child(1) {
+      flex: 0 1 400px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      flex: 0 1 160px;
+    }
+    &:nth-child(4) {
+      flex: 0 1 auto;
+    }
+  }
+  &__logo {
+    margin-bottom: 30px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__link {
+    font-size: 12px;
+    margin-bottom: 12px;
+    & + .footer__link {
+      margin-left: 30px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__socials {
+    .icon-google-plus {
+      font-size: 20px;
+    }
+
+  }
 }

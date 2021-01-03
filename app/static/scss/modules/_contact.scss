@@ -4,9 +4,7 @@ $distance: 160px;
   margin-top: -$distance;
   padding-bottom: 180px; 
   background-color: $alabaster;
-  &__container {
-
-  }
+  border-bottom: 1px solid $gallery;
   &__canvas {
     height: 900px;
     clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
