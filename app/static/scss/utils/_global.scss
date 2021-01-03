@@ -99,11 +99,14 @@ img {
 	}
 }
 
-.main-skew {
+.main-skew-career {
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 }
-section {
-	border-bottom: 1px solid $gallery;
+
+.main-skew-contact {
+	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
 }
+
+	
 
 

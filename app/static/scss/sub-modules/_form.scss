@@ -1,0 +1,37 @@
+.form {
+  max-width: 750px;
+  width: 100%;
+  padding: 70px 40px 80px;
+  border-radius: 8px;
+  background-color: $white;
+  box-shadow: 0px 0px 28px 0px rgba(183, 183, 183, 0.45);  
+  &__label {
+    display: block;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 30px;
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: inline-block;
+      width: calc(50% - 10px);
+    }
+    &:nth-child(2) {
+      margin-right: 15px;
+    }
+  }
+  &__item {
+    margin-top: 20px;
+  }
+  &__input {
+    padding: 0 20px;  
+  }
+  &__textarea {
+    padding: 10px;
+    height: 175px;
+  }
+  &__button {
+  }
+}
+

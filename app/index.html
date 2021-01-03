@@ -10,7 +10,8 @@
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto:wght@100;300;400&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto:wght@100;300;400&display=swap"
 		rel="stylesheet">
 </head>
 
@@ -19,7 +20,7 @@
 	<noscript> Включите JavaScript </noscript>
 	<div class="wrapper">
 		<main class="content">
-			<div class="canvas"></div>
+			<canvas class="canvas header__canvas"></canvas>
 			<header class="header">
 				<div class="header__top">
 					<div class="container header__container">
@@ -127,17 +128,17 @@
 			</section>
 
 			<section class="services">
-				
-					<div class="container services__container">
-						<div class="images-wrapper services__images">
-							<picture>
-								<source
-									srcset="images/content/girlInMac.webp 1x, images/content/girlInMac@2x.webp 2x, images/content/girlInMac@3x.webp 3x">
-								<source
-									srcset="images/content/girlInMac.png 1x, images/content/girlInMac@2x.png 2x, images/content/girlInMac@3x.png 3x">
-								<img src="images/content/girlInMac.png" alt="Девушка на компьютере Mac">
-							</picture>
-						</div>
+
+				<div class="container services__container">
+					<div class="images-wrapper services__images">
+						<picture>
+							<source
+								srcset="images/content/girlInMac.webp 1x, images/content/girlInMac@2x.webp 2x, images/content/girlInMac@3x.webp 3x">
+							<source
+								srcset="images/content/girlInMac.png 1x, images/content/girlInMac@2x.png 2x, images/content/girlInMac@3x.png 3x">
+							<img src="images/content/girlInMac.png" alt="Девушка на компьютере Mac">
+						</picture>
+					</div>
 					<div class="services__content">
 						<h2 class="services__title title">Наши услуги и специальные области
 						</h2>
@@ -166,7 +167,7 @@
 				</div>
 			</section>
 
-			<section class="career main-skew">
+			<section class="career main-skew-career">
 				<div class="container career__container">
 					<h2 class="career__title title">Давайте вместе строить великие дела</h2>
 					<p class="career__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, delectus!</p>
@@ -190,7 +191,24 @@
 					</div>
 				</div>
 			</section>
+			<section class="contact main-skew-contact">
+				<canvas class="canvas contact__canvas"></canvas>
+				<div class="container contact__container">
+					<div class="contact__headline">
+						<h2 class="contact__title title">Контакты</h2>
+						<p class="contact__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, perspiciatis.</p>
+					</div>
+					
+					<form class="contact__form form">
+						<label class="form__label">Е-мейл<input type="text" class="input form__item form__input"></label>
+						<label class="form__label">Имя<input type="text" class="input form__item form__input"></label>
+						<label class="form__label">Фамилия<input type="text" class="input form__item form__input"></label>
+						<label class="form__label">Сообщения<textarea class="input form__item form__textarea"></textarea></label>
+						<button class="form__button button">Отправить</button>
+					</form>
 
+				</div>
+			</section>
 		</main>
 		<footer class="footer"></footer>
 	</div>

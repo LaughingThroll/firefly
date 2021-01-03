@@ -9,7 +9,7 @@
 @import 'modules/customers';
 @import 'modules/services';
 @import 'modules/career';
-
+@import 'modules/contact';
 @import 'modules/footer';
 
 @import './sub-modules/canvas';
@@ -25,5 +25,7 @@
 @import './sub-modules/benefits/benefit';
 @import './sub-modules/counters/counters';
 @import './sub-modules/counters/counter';
+@import './sub-modules/input';
+@import './sub-modules/form';
 
 @import 'utils/media';

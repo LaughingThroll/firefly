@@ -10,11 +10,13 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__canvas {
+    height: 100vh;
+  }
   &__top {
     padding-top: 15px;
     padding-bottom: 15px;
-    // border-bottom: $mercury 1px solid;
-    border-bottom: $fruit-salad 1px solid;
+    border-bottom: $mercury 1px solid;
   }
   &__bottom {
     position: relative;
