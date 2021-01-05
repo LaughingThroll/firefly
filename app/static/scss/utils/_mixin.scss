@@ -53,6 +53,18 @@
   }
 }
 
+@mixin max-height($height) {
+  @media only screen and (max-height: $height) {
+      @content;
+  }
+}
+
+@mixin mix-screen($width, $height) {
+  @media screen and (max-width: $width) and (max-height: $height)  {
+    @content
+  }
+}
+
 @mixin i-sprite($sprite) {
   @include sprite-position($sprite);
   @include sprite-width($sprite);

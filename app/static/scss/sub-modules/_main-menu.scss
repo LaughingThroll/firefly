@@ -1,18 +1,20 @@
 .main-menu {
   @include max-width(900px) {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
     background-color: rgba($white, 0.8);
     z-index: 99;
+    padding: 140px 0 20px;
     overflow: scroll;
-    padding-top: 140px;
     transform: translateY(-100%);
     transition: transform $average cubic-bezier(.17,1.2,.97,.36);
   }
@@ -22,6 +24,7 @@
   &--active { 
     @include max-width(900px) { 
       transform: translateY(0);
+      // top: 0 !important;
     }  
   }
   &__list {

@@ -99,6 +99,11 @@ img {
 	}
 }
 
+.overflow-hidden {
+	position: fixed;
+	width: 100%;
+}
+
 .main-skew-career {
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 }
@@ -106,6 +111,8 @@ img {
 .main-skew-contact {
 	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
 }
+
+
 
 	
 

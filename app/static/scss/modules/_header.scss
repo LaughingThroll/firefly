@@ -14,16 +14,16 @@
       align-items: flex-start; 
     }
   }
-  &__canvas {
-    height: 100vh;
-  }
   &__top {
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: $mercury 1px solid; 
   }
   &__socials-list {
-    margin-bottom: 20px;
+    @include max-width(420px) {
+      margin-bottom: 20px;
+    }
+    
   }
   &__bottom {
     position: relative;

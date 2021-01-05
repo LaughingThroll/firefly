@@ -1,15 +1,25 @@
 .banner {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   border-bottom: 1px solid $gallery;
+  @include max-width(900px) {
+    height: 600px;
+  }
+  &__canvas {
+    height: 100%;
+  }
   &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    padding-top: 200px;
     & > *:not(button) {
       margin: 0 auto 30px;
       width: 100%;
@@ -17,8 +27,17 @@
   }
   &__title {
     max-width: 945px;
+    width: 100%;
+    @include max-width(600px) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
   &__text {
     max-width: 750px;
+    width: 100%;
+    @include max-width(500px) {
+      
+    }
   }
 }
