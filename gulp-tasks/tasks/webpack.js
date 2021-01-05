@@ -6,7 +6,6 @@
 // I know how  solve problem in webpack but no this how it's doing in gulp or gulp + webpack.
 // Until the next rebuild
 module.exports = () => {
-  console.log(G.path.resolve(__dirname))
   const PATH = {
     js: G.path.resolve(__dirname, './../../app/static/js'),
     static: G.path.resolve(__dirname, './../../app/static')
@@ -38,7 +37,7 @@ module.exports = () => {
         cacheGroups: {
           vendor: {
             test: /node_modules/,
-            name: 'vendors',
+            name: 'vendor',
             chunks: 'all',
             enforce: true
           }

@@ -1,6 +1,28 @@
 .burger-btn {
-  &__icon {
-    width: 15px;
-    height: 10px;
+  width: 15px;
+  height: 10px;
+  &__rect {
+    background-color: $burger-rect;
+    transition: width $fast ease;
+    height: 2px;
+    border-radius: 30%;
+    margin-left: auto;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+    &:nth-child(1) {
+      width: 13px; 
+    }
+    &:nth-child(2) {
+      width: 10px;
+    }
+    &:nth-child(3) {
+      width: 15px;
+    }
+  }
+  &--active {
+    .burger-btn__rect {
+      width: 100%;
+    }
   }
 }
