@@ -3,4 +3,7 @@
   width: 100%;
   background-color: $wild-sand;
   border-radius: 3px;
+  @include max-width(800px) {
+    height: 42px;
+  }
 }
