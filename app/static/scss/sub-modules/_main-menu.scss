@@ -24,7 +24,7 @@
   &--active { 
     @include max-width(900px) { 
       transform: translateY(0);
-      // top: 0 !important;
+      
     }  
   }
   &__list {

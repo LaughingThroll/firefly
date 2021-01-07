@@ -15,11 +15,13 @@ body {
 }
 
 body {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	font-family: $main-font;
 	color: $main-color;
 	font-weight: 400;
+
 }
 // start reset CSS
 h1,

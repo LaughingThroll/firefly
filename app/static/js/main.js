@@ -10,10 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
   const logo = document.querySelector('.logo')
   const burgerBtn = document.querySelector('#burger-btn')
 
-  // window.addEventListener('scroll', (e) => {
-    
-  // })
-
 
   const menuAdaptive = () => {
     if (window.innerWidth <= 900) content.insertAdjacentElement('afterbegin', mainMenu)
@@ -24,23 +20,13 @@ window.addEventListener('DOMContentLoaded', function () {
   menuAdaptive()
   window.addEventListener('resize', menuAdaptiveDebounced)
 
-  burgerBtn.addEventListener('click', function () {
-    const scrollTop = window.scrollY
-    const height = window.innerHeight
-    // const totalHeight = scrollTop + height
-    // console.log('before', scrollTop)
+  burgerBtn.addEventListener('click', function () {    
     scrollHiddenBody()
-
-    
-    console.log('after',scrollTop)
 
     this.classList.toggle('burger-btn--active')
     mainMenu.classList.toggle('main-menu--active')
-    window.scrollTo({
-      top: scrollTop 
-    }) 
+ 
   })
-
 
 })
 
