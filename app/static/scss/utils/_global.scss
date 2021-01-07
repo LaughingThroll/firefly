@@ -109,10 +109,14 @@ img {
 
 .main-skew-career {
 	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+	@include max-width(800px) {
+		clip-path: polygon(0 10%, 100% 0, 100% 95%, 0% 100%);
+	}
 }
 
 .main-skew-contact {
 	clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+	
 }
 
 
