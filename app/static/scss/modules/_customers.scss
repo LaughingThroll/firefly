@@ -4,15 +4,32 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
-  } 
+    align-items: center;
+    @include max-width(800px) {
+      flex-direction: column;
+    }
+  }
   &__headline {
     max-width: 360px;
     width: 100%;
     margin-right: 20px;
+    @include max-width(800px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__title {
     margin-bottom: 25px;
+    @include max-width(800px) {
+     
+      margin-bottom: 10px;
+    }
   }
-
+  &__list {
+    max-width: 680px;
+    width: 100%;
+    @include max-width(800px) {
+      max-width: 100%;
+    }
+  }
 }
