@@ -4,8 +4,17 @@
   &__item {
     flex: 0 1 calc(50% - 30px);
     margin-bottom: 60px;
+    @include max-width(800px) {
+      margin-bottom: 40px;
+     }
+     @include max-width(568px) {
+      flex: 0 1 100%;
+     }
     &:nth-child(even) {
       margin-left: 20px;
+      @include max-width(568px) {
+        margin-left: 0;
+       }
     }
   }
 }
