@@ -1,8 +1,15 @@
 .footer {
   padding: 80px 0;
+  @include max-width(980px) {
+    padding: 50px 0;
+  }
   &__container {
     display: flex;
     justify-content: space-between;    
+    @include max-width(980px) {
+      flex-direction: column;
+    }
+
   }   
   &__col {
     &:nth-child(1) {
@@ -15,9 +22,26 @@
     &:nth-child(4) {
       flex: 0 1 auto;
     }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      @include max-width(980px) {
+        flex: 0 1 100%;
+      }
+    }
+    & + .footer__col {
+      @include max-width(980px) {
+        margin-top: 30px;
+      }
+    }
+    
   }
   &__logo {
     margin-bottom: 30px;
+    @include max-width(980px) {
+      margin-bottom: 10px;
+    }
   }
   &__text {
     margin-bottom: 20px;
@@ -36,6 +60,10 @@
     .icon-google-plus {
       font-size: 20px;
     }
-
+  }
+  &__copyrighting {
+    @include max-width(980px) {
+      display: block;
+    }
   }
 }
