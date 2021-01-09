@@ -2,6 +2,7 @@
 .AppleDouble
 .LSOverride
 .vscode
+debug.log
 
 /dist 
 /build
