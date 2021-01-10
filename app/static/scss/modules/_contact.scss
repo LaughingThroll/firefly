@@ -7,7 +7,10 @@ $distance: 160px;
   border-bottom: 1px solid $gallery;
   @include max-width(800px) {
    margin-top: -$distance + -60px; 
-   padding-bottom: 100px;
+   padding-bottom: 40px;
+  }
+  @include max-width(425px) {
+    padding-bottom: 100px;
   }
   &__container {
     position: absolute;

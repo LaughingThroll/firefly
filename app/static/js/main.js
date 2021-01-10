@@ -4,11 +4,12 @@ import { debounce, scrollHiddenBody } from './utils/index'
 import { createAccordion, destroyAccordion } from './modules/accordion'
 
 window.addEventListener('DOMContentLoaded', function () {
-  const LATENCY_MS = 1000
+  const LATENCY_MS = 200
   const content = document.querySelector('.content')
   const mainMenu = document.querySelector('.main-menu')
   const logo = document.querySelector('.logo')
   const burgerBtn = document.querySelector('#burger-btn')
+
 
   const menuAdaptive = () => {
     if (window.innerWidth <= 900) content.insertAdjacentElement('afterbegin', mainMenu)
@@ -26,15 +27,18 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 
   function initAccordionOnResize(dataAccordion) {    
-    if (window.innerWidth <= 980) createAccordion(dataAccordion)
+    if (window.innerWidth <= 980) createAccordion(dataAccordion) 
     if (window.innerWidth > 980) destroyAccordion(dataAccordion)
   }
 
   
-  const initAccordionDebounced = debounce(initAccordionOnResize, 1000)
+  const initAccordionDebounced = debounce(initAccordionOnResize, LATENCY_MS)
   
-  initAccordionOnResize()
-  window.addEventListener('resize', initAccordionOnResize)
+  initAccordionDebounced()
+  window.addEventListener('resize', initAccordionDebounced)
+
+
+
 
 })
 

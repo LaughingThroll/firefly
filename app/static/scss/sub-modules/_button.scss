@@ -9,8 +9,26 @@
   text-transform: capitalize;
 }
 
-.button-accordion {
-  width: 100%;
-  // border-top: 1px solid ;
+.custom-button {
+  position: relative;
+  background-color: $mercury;
+  border-top: 1px solid $slate-gray;
+  border-bottom: 1px solid $slate-gray;
+  margin-bottom: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%) rotate(45deg);
+    border: solid darken($mercury, 20); 
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transition: transform .5s ease;
+  }
+  &--active {
+    &::before {
+      transform: translateY(-50%) rotate(-135deg);
+    }
+  }
 }
-

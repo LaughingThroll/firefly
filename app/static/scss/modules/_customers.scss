@@ -16,6 +16,7 @@
     @include max-width(800px) {
       max-width: 100%;
       margin-bottom: 20px;
+      margin-right: 0;
     }
   }
   &__title {
