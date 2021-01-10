@@ -1,5 +1,5 @@
-import { slideToggle } from './slideAnimation'
-import { throttle } from '../utils/throttle'
+import { slideToggle } from '../utils/slideAnimation'
+import { throttle } from '../utils/index'
 
 const dataAccordion = Array.from(document.querySelectorAll('[data-accordion]'))
 let addListener = true

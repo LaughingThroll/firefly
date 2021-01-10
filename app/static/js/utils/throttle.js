@@ -7,4 +7,4 @@ function throttle(f, t) {
   }
 }
 
-export { throttle }
+export default throttle 
