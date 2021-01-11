@@ -5,6 +5,7 @@ import { addActiveClass } from './modules/addActiveClass'
 import { counterNumber } from './modules/counterNumber' 
 import { revealAnimation } from './modules/revealAnimation'
 import validationForm from './modules/validationForm'
+import sendForm from './modules/sendForm'
 
 window.addEventListener('DOMContentLoaded', function () {
   
@@ -49,9 +50,14 @@ window.addEventListener('DOMContentLoaded', function () {
   
   window.addEventListener('submit', (e) => {
     e.preventDefault()
-    validationForm({
-      form: form
-    })
+    const data = validationForm(form)
+    if (data) {
+      // sendForm({
+        // URL: '',
+        // headers: {},
+        // body: data
+      // })
+    }
   })
 })
 

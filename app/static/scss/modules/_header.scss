@@ -50,8 +50,10 @@
     }
   }
   &__burger-btn {
+    pointer-events: none;
     @include max-width(900px) {
       margin-left: auto;
+      pointer-events: auto;
     }
   }
 }
