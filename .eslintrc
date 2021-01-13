@@ -8,5 +8,8 @@
     "require": true,
     "global": true,
     "module": true
-  }
+  },
+  "plugins": [
+    "classPrivateMethods"
+  ]
 }

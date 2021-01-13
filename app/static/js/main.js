@@ -1,11 +1,12 @@
 import './utils/modernizr'
+import './modules/canvas/canvas.js'
 import { debounce, scrollHiddenBody } from './utils/index'
 import { createAccordion, destroyAccordion } from './modules/accordion'
 import { addActiveClass } from './modules/addActiveClass'
 import { counterNumber } from './modules/counterNumber' 
 import { revealAnimation } from './modules/revealAnimation'
-import validationForm from './modules/validationForm'
-import sendForm from './modules/sendForm'
+import validationForm from './modules/form/validationForm'
+import sendForm from './modules/form/sendForm'
 
 window.addEventListener('DOMContentLoaded', function () {
   
