@@ -26,7 +26,7 @@ function render() {
     el.ctx.clearRect(0, 0, canvas[i].width, canvas[i].height)
   })
 
-  contexts[0].zigZag(canvas[0].width / 2, canvas[0].height / 2)
+  contexts[0].wave(canvas[0].width / 2, canvas[0].height / 2)
   
 
   window.requestAnimationFrame(render)

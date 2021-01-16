@@ -157,12 +157,12 @@ export default class Shapes {
 
   zigZag(startX, startY, options) {
     // const options = {
-      // distance: 6
-      // amplitude: 5
-      // count: 10
-      // reverse: 1
-      // lineWidth: 3
-      // strokeStyle = 'red'
+    // distance: 6
+    // amplitude: 5
+    // count: 10
+    // reverse: 1
+    // lineWidth: 3
+    // strokeStyle = 'red'
     // }
     const count = options?.count || 5
     const mainLineWidth = options?.lineWidth || 3
@@ -170,7 +170,7 @@ export default class Shapes {
     const distance = options?.distance || 6
     const amplitude = options?.amplitude || 4
     const reverse = +options?.reverse || +false
-    
+
     let boldWidth = mainLineWidth + 2
     const offset = boldWidth / 3
 
@@ -182,8 +182,32 @@ export default class Shapes {
       !(pattern % 2) ? this.ctx.lineWidth = mainLineWidth || 3 : this.ctx.lineWidth = boldWidth
       this.ctx.beginPath()
       this.ctx.moveTo(startX + offset, startY)
-      this.ctx.lineTo(startX += distance, pattern % 2 === reverse  ? startY += amplitude : startY -= amplitude)
+      this.ctx.lineTo(startX += distance, pattern % 2 === reverse ? startY += amplitude : startY -= amplitude)
       this.ctx.stroke()
+    }
+    this.ctx.restore()
+  }
+  wave(startX, startY, options) {
+    const count = options?.count || 3
+    const margin = options?.margin || 15
+    const width = options?.width || 180
+    const frequency = options?.frequency || .4
+    const amplitude = options?.amplitude || 3
+    this.ctx.save()
+    this.ctx.strokeStyle = options?.strokeStyle || 'violet'
+    this.ctx.fillStyle = options?.strokeStyle || 'violet'
+    this.ctx.lineWidth = options?.lineWidth || 5
+    
+    this.ctx.beginPath()
+    
+    for(let num = 0; num < count; num++) {  
+      this.ctx.moveTo(startX, startY)
+      
+      for(let i = 0; i < width; i++) {
+        this.ctx.lineTo(startX + i, startY  + Math.sin(i * frequency) * amplitude)
+      }
+      this.ctx.stroke()
+      startY += margin
     }
     this.ctx.restore()
   }
