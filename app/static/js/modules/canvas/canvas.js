@@ -5,10 +5,15 @@ const canvas = Array.from(document.querySelectorAll('.canvas'))
 function sizeCanvas() {
   canvas.forEach(el => {
     const { width, height } = document.body.getBoundingClientRect()
-    el.width = width
-    el.height = height
+    el.width = width * 2
+    el.height = height * 2
   })
 }
+// for retina
+canvas.forEach(el => {
+  el.style.width = '100%'
+  el.style.height = '100%'
+})
 
 sizeCanvas()
 window.addEventListener('resize', sizeCanvas)
@@ -21,11 +26,7 @@ function render() {
     el.ctx.clearRect(0, 0, canvas[i].width, canvas[i].height)
   })
 
-  contexts[0].rectInCircle({
-    x: canvas[0].width / 2,
-    y: canvas[0].height / 2,
-    radius: 30
-  })
+  contexts[0].zigZag(canvas[0].width / 2, canvas[0].height / 2)
   
 
   window.requestAnimationFrame(render)

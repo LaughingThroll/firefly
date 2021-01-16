@@ -109,21 +109,20 @@ export default class Shapes {
   }
 
   rectInCircle(options) {
-    console.log(options)
     // const options = {
-      // x, 
-      // y,
-      // radius
-      // circle: {
-        // circleColor: 'green',
-        // circleWidth: 10,
-      // },
-      // lineWidth: {
-        // lineColor: 'black',
-        // lineWidth: 10,
-        // plusDistance: 0,
-        // rotateLine: 0
-      // }
+    // x, 
+    // y,
+    // radius
+    // circle: {
+    // circleColor: 'green',
+    // circleWidth: 10,
+    // },
+    // lineWidth: {
+    // lineColor: 'black',
+    // lineWidth: 10,
+    // plusDistance: 0,
+    // rotateLine: 0
+    // }
     // }
 
     this.ctx.save()
@@ -151,8 +150,41 @@ export default class Shapes {
     this.ctx.beginPath()
     this.ctx.strokeStyle = options.circle?.circleColor || 'green'
     this.ctx.lineWidth = options.circle?.circleWidth || 10
-    this.ctx.arc(options.x, options.y, options.radius, this.#degreeToRad(120 + options.line?.rotateLine || 0), this.#degreeToRad(150 + options.line?.rotateLine || 0))
+    this.ctx.arc(options.x, options.y, options.radius, this.#degreeToRad(120 + (options.line?.rotateLine || 0)), this.#degreeToRad(150 + (options.line?.rotateLine || 0)))
     this.ctx.stroke()
-    this.ctx.restore()    
-  }  
+    this.ctx.restore()
+  }
+
+  zigZag(startX, startY, options) {
+    // const options = {
+      // distance: 6
+      // amplitude: 5
+      // count: 10
+      // reverse: 1
+      // lineWidth: 3
+      // strokeStyle = 'red'
+    // }
+    const count = options?.count || 5
+    const mainLineWidth = options?.lineWidth || 3
+    const mainLineColor = options?.strokeStyle || 'red'
+    const distance = options?.distance || 6
+    const amplitude = options?.amplitude || 4
+    const reverse = +options?.reverse || +false
+    
+    let boldWidth = mainLineWidth + 2
+    const offset = boldWidth / 3
+
+    this.ctx.save()
+    this.ctx.strokeStyle = mainLineColor
+    this.ctx.lineCap = 'round'
+    this.ctx.lineJoin = 'round'
+    for (let pattern = 0; pattern < count; pattern++) {
+      !(pattern % 2) ? this.ctx.lineWidth = mainLineWidth || 3 : this.ctx.lineWidth = boldWidth
+      this.ctx.beginPath()
+      this.ctx.moveTo(startX + offset, startY)
+      this.ctx.lineTo(startX += distance, pattern % 2 === reverse  ? startY += amplitude : startY -= amplitude)
+      this.ctx.stroke()
+    }
+    this.ctx.restore()
+  }
 }
